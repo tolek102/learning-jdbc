@@ -4,9 +4,11 @@ import com.pbf.lil.jdbc.util.DataTransferObject;
 
 import lombok.Getter;
 import lombok.Setter;
+import lombok.ToString;
 
 @Getter
 @Setter
+@ToString
 public class Customer implements DataTransferObject {
 
     private long id;
