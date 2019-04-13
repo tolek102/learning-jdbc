@@ -11,9 +11,8 @@ public class JDBCExecutor {
 
         try {
             Connection connection = dcm.getConnection();
-            OrderDAO orderDAO = new OrderDAO(connection);
-            Order order = orderDAO.findById(1000);
-            System.out.println(order);
+            CustomerDAO customerDAO = new CustomerDAO(connection);
+            customerDAO.findAllSorted(20).forEach(System.out::println);
         }catch (SQLException e) {
             e.printStackTrace();
         }
